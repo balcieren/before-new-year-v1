@@ -4,15 +4,13 @@
   "main": "server.ts",
   "scripts": {
     "dev": "nodemon server.ts",
-    "start": "env NODE_ENV=production ts-node server.ts",
+    "start": "ts-node server.ts env NODE_ENV=production ",
     "build": "next build"
   },
   "dependencies": {
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "env": "^0.0.2",
     "express": "^4.17.1",
     "framer-motion": "^3.1.1",
     "moment": "^2.29.1",
@@ -36,10 +34,11 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.0.0",
     "typescript": "^4.1.2",
-    "typescript-plugin-css-modules": "^3.0.1",
-    "nodemon": "^2.0.6"
+    "typescript-plugin-css-modules": "^3.0.1"
   }
 }

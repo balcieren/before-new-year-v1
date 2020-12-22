@@ -17,3 +17,10 @@ declare module "*.module.scss" {
   const classes: { [key: string]: string };
   export default classes;
 }
+
+declare namespace NodeJS {
+  interface ProcessEnv {
+    [key: string]: string | undefined;
+    NODE_ENV?: "development" | "production" | "test";
+  }
+}
