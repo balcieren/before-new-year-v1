@@ -8,7 +8,7 @@ const Header = () => {
     <Container>
       <Logo>
         <Link href="/">
-          <h1>Before New Year</h1>
+          <Title>Before New Year</Title>
         </Link>
       </Logo>
       <NavigationBar>
@@ -33,9 +33,11 @@ const Container = styled.header`
   height: 10vh;
   padding: 0rem 1rem;
 `;
-const Logo = styled.div`
-  h1 {
-    cursor: pointer;
+const Logo = styled.div``;
+const Title = styled.h1`
+  cursor: pointer;
+  @media (max-width: 405px) {
+    fontsize: 0.8em !important;
   }
 `;
 const NavigationBar = styled.ul`

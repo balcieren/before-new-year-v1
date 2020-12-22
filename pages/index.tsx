@@ -78,7 +78,9 @@ const FirstSection = styled.section`
   display: grid;
   grid-template-columns: 40vw 60vw;
   @media (max-width: 1000px) {
-    grid-template-columns: 90vw;
+    justify-content: center;
+    aligitems: center;
+    grid-template-columns: 90vw !important;
   } ;
 `;
 const Section = styled(motion.div)`
@@ -94,10 +96,12 @@ const TextSection = styled(Section)`
   justify-content: center;
   align-items: flex-start;
   padding-left: 5rem;
+  word-break: break-word;
+  text-align: center;
   @media (max-width: 1000px) {
     align-items: center;
     padding-left: 0rem;
-  } ;
+  }
 `;
 
 const ImageSection = styled(Section)`
@@ -117,7 +121,11 @@ const Text = styled(motion.p)`
   font-size: 3.5em;
   @media (max-width: 1000px) {
     font-size: 3em;
-  } ;
+  }
+  @media (max-width: 470px) {
+    align-items: center;
+    font-size: 2.4em;
+  }
 `;
 const ImageMoveSection = styled(Section)`
   display: flex;
