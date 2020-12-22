@@ -3,12 +3,14 @@ import { EffectCallback, FC, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import { BackgroundColor } from "theme/GlobalStyle";
+import { ScrollTo } from "react-scroll-to";
 interface NotesPropsType {
   defaultPage: number;
   notes: [];
+  onScroll?: (event: any) => void;
 }
 
-const Pagination: FC<NotesPropsType> = ({ notes, defaultPage }) => {
+const Pagination: FC<NotesPropsType> = ({ notes, defaultPage, onScroll }) => {
   const router = useRouter();
   var pages = [];
   const pagesLength = notes.length / 10;
@@ -21,7 +23,10 @@ const Pagination: FC<NotesPropsType> = ({ notes, defaultPage }) => {
       {pages.map((page, index) => (
         <Button
           selectedPage={page + 1 == defaultPage ? true : false}
-          onClick={() => router.push(`/notes/?page=${page + 1}`)}
+          onClick={() => {
+            router.push(`/notes/?page=${page + 1}`);
+            onScroll(() => {});
+          }}
           key={index}
         >
           {page + 1}

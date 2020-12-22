@@ -9,6 +9,7 @@ import { AnimatePresence, motion, Variants } from "framer-motion";
 import { FC } from "react";
 import useAPI from "hooks/useApi";
 import Head from "next/head";
+import { ScrollTo } from "react-scroll-to/dist";
 
 export async function getServerSideProps(context: NextPageContext) {
   const API = useAPI();
@@ -42,13 +43,20 @@ const Notes: FC<Props> = ({ notes, allNotes, defaultPage }) => {
         <CounterBox />
       </div>
 
-      <div className="note">
-        {notes?.map((note) => (
-          <Note key={note._id} note={note} />
-        ))}
-
-        <Pagination defaultPage={defaultPage} notes={allNotes} />
-      </div>
+      <ScrollTo>
+        {({ scroll }) => (
+          <div className="note">
+            {notes?.map((note) => (
+              <Note key={note._id} note={note} />
+            ))}
+            <Pagination
+              onScroll={() => scroll({ x: 0, y: 0, smooth: true })}
+              defaultPage={defaultPage}
+              notes={allNotes}
+            />
+          </div>
+        )}
+      </ScrollTo>
       <div className="create">
         <CreateNote />
       </div>

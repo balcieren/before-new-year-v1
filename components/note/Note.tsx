@@ -4,6 +4,7 @@ import { rgba } from "polished";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import { NotePropTypes } from "api/models/Note";
+import { ScrollTo } from "react-scroll-to/dist";
 
 interface Props {
   note: {
@@ -29,7 +30,7 @@ const Note: FC<Props> = ({ note }) => {
           <DateText>{moment(note.date).calendar()}</DateText>
         </div>
       </Top>
-      <Content>
+      <Content id="noteContent">
         <Paragraph>{note.text}</Paragraph>
       </Content>
       <Bottom></Bottom>
