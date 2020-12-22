@@ -4,7 +4,7 @@
   "main": "server.ts",
   "scripts": {
     "dev": "nodemon server.ts",
-    "start": "ts-node server.ts env NODE_ENV=production ",
+    "start": "ts-node server.ts env NODE_ENV=production",
     "build": "next build"
   },
   "dependencies": {
