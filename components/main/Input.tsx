@@ -49,6 +49,15 @@ const TextInput = styled.input<Props>`
   padding-left: ${({ icon }) => icon && "2rem"};
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: 0px 13px 24px -7px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+  ::placeholder {
+    font-weight: 100 !important;
+    opacity: 0.85;
+  }
+  :placeholder-shown {
+    font-weight: 100 !important;
+    opacity: 0.85;
+  }
   :hover {
     box-shadow: 0px 17px 16px -11px rgba(0, 0, 0, 0.2);
   }

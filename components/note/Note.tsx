@@ -80,7 +80,7 @@ const UserBox = styled.div`
   align-items: center;
   column-gap: 1rem;
   word-break: break-word;
-  text-align: justify;
+  text-align: start;
 `;
 
 const Avatar = styled.img`
