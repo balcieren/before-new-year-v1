@@ -27,9 +27,7 @@
     "react-modal": "^3.12.1",
     "react-paginate": "^6.5.0",
     "react-spinners": "^0.9.0",
-    "styled-components": "^5.2.1"
-  },
-  "devDependencies": {
+    "styled-components": "^5.2.1",
     "@types/express": "^4.17.9",
     "@types/mongoose": "^5.10.3",
     "@types/node": "^14.14.10",
