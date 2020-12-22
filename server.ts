@@ -6,7 +6,7 @@ import cors from "cors";
 import noteController from "./api/controllers/note";
 import mongooseHandler from "./utils/mongooseHandler";
 import { router } from "./api/router";
-dotenv.config({ path: __dirname + "/.env" });
+dotenv.config();
 
 const port = process.env.PORT || 8000;
 const dev = process.env.NODE_ENV !== "production";
