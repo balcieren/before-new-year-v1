@@ -7,7 +7,7 @@ import { ScrollTo } from "react-scroll-to";
 interface NotesPropsType {
   defaultPage: number;
   notes: [];
-  onScroll?: (event: any) => void;
+  onScroll?(): void;
 }
 
 const Pagination: FC<NotesPropsType> = ({ notes, defaultPage, onScroll }) => {
@@ -23,9 +23,9 @@ const Pagination: FC<NotesPropsType> = ({ notes, defaultPage, onScroll }) => {
       {pages.map((page, index) => (
         <Button
           selectedPage={page + 1 == defaultPage ? true : false}
-          onClick={() => {
+          onClick={async () => {
+            await onScroll();
             router.push(`/notes/?page=${page + 1}`);
-            onScroll(() => {});
           }}
           key={index}
         >
