@@ -1,0 +1,12 @@
+{
+  "ignore": [
+    "node_modules",
+    ".next"
+  ],
+  "watch": [
+    "server/**/*",
+    "server.ts",
+    "api/**/*"
+  ],
+  "ext": "ts json"
+}
