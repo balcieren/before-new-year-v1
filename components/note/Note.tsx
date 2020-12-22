@@ -70,7 +70,8 @@ const Top = styled.div`
   align-items: center;
 `;
 const Content = styled.div`
-  word-break: break-all;
+  word-break: break-word;
+  text-align: justify;
 `;
 const Bottom = styled.div``;
 
@@ -78,7 +79,8 @@ const UserBox = styled.div`
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  word-break: break-all;
+  word-break: break-word;
+  text-align: justify;
 `;
 
 const Avatar = styled.img`

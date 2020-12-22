@@ -7,7 +7,7 @@ export interface NotePropTypes extends Document {
 }
 
 const NoteSchema: Schema = new Schema({
-  username: { type: String, required: true, maxlength: 200, trim: true },
+  username: { type: String, required: true, maxlength: 50, trim: true },
   text: { type: String, required: true, maxlength: 500, trim: true },
   date: { type: Date, required: true, default: new Date() },
 });
