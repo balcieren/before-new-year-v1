@@ -8,7 +8,7 @@ import mongooseHandler from "./utils/mongooseHandler";
 import { router } from "./api/router";
 dotenv.config({ path: __dirname + "/.env" });
 
-const port: number = 3000;
+const port: number = 80;
 const dev = process.env.NODE_ENV !== "production";
 const nextApp = next({ dev });
 const nextHandler = nextApp.getRequestHandler();
