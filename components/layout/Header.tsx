@@ -34,11 +34,10 @@ const Container = styled.header`
   padding: 0rem 1rem;
 `;
 const Logo = styled.div``;
-const Title = styled.h1`
+const Title = styled.p`
   cursor: pointer;
-  @media (max-width: 405px) {
-    fontsize: 0.8em !important;
-  }
+  font-weight: 900;
+  font-size: 1.75em;
 `;
 const NavigationBar = styled.ul`
   display: flex;

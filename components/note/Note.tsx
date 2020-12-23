@@ -71,9 +71,17 @@ const Top = styled.div`
   align-items: center;
 `;
 const Content = styled.div`
-  word-break: break-word;
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
   text-align: justify;
+  word-break: keep-all;
 `;
+const Paragraph = styled.p`
+  width: 100% !important;
+`;
+
 const Bottom = styled.div``;
 
 const UserBox = styled.div`
@@ -97,5 +105,4 @@ const DateText = styled.p`
   font-size: 0.8em;
 `;
 
-const Paragraph = styled.p``;
 export default Note;
