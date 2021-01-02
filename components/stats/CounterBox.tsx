@@ -11,7 +11,7 @@ const CounterBox: FC = () => {
       exit={{ opacity: 0 }}
     >
       <Section initial={{ scale: 0 }} animate={{ scale: 1 }}>
-        <Title>New Year Countdown to 2021</Title>
+        <Title>New Year Countdown to 2022</Title>
       </Section>
       <Section>
         <Counter />
