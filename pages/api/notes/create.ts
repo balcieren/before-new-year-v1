@@ -5,7 +5,6 @@ mongooseHandler();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
-    console.log(req.body);
     try {
       await Note.create({
         ...req.body.note,
