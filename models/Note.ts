@@ -1,4 +1,4 @@
-import { model, Schema, Model, Document, Date } from "mongoose";
+import { model, Schema, Model, Document, Date, models } from "mongoose";
 
 export interface NotePropTypes extends Document {
   username: string;
@@ -12,4 +12,5 @@ const NoteSchema: Schema = new Schema({
   date: { type: Date, required: true, default: new Date() },
 });
 
-export const Note: Model<NotePropTypes> = model("Note", NoteSchema);
+export const Note: Model<NotePropTypes> =
+  models.Note || model("Note", NoteSchema);

@@ -3,7 +3,7 @@ import moment from "moment";
 import { rgba } from "polished";
 import { motion } from "framer-motion";
 import { FC } from "react";
-import { NotePropTypes } from "api/models/Note";
+import { NotePropTypes } from "models/Note";
 import { ScrollTo } from "react-scroll-to/dist";
 
 interface Props {
