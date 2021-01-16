@@ -29,7 +29,7 @@ const CreateNote = () => {
 
   const sendPost = async (data: NotePropTypes) => {
     setLoading(true);
-    return await API.post("/notes", {
+    return await API.post("/notes/create", {
       note: data,
     })
       .then(() => {
