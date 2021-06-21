@@ -4,7 +4,7 @@
 
 ## About
 
-This app has made for taking last note before new year. You can write your ideas, wishes, feelings and share other users.
+This app has made for taking last note before new year. You can write your ideas, wishes, feelings and share with other users.
 
 ## Images
 
